@@ -50,7 +50,7 @@ clean:
 	rm -f $(EXEC) 
 
 # Dependencies
-#depend: 
-#
-#	$(GCC) -M $(CPPFLAGS) $(SOURCES) > .depend
-#include .depend
+depend: 
+
+	$(GCC) -M $(CPPFLAGS) $(SOURCES) > .depend
+include .depend
