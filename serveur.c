@@ -11,6 +11,8 @@
 #include <netdb.h> /* gethostbyname */
 
 
+#define _XOPEN_SOURCE 700
+
 int main(int argc, char const *argv[])
 {
 	int port;
@@ -30,7 +32,7 @@ int main(int argc, char const *argv[])
 
 
 	int sock= socket(AF_INET, SOCK_STREAM,0);
-	struct sockadrr_in sin;
+	struct sockaddr_in sin;
 	memset(&sin,0,sizeof sin);
 
 	if(sock < 0){
@@ -38,7 +40,7 @@ int main(int argc, char const *argv[])
 		exit(errno);
 	}
 
-	sin.sin_adrr.s_addr=htonl(INADDR_ANY);
+	sin.sin_addr.s_addr = htonl(INADDR_ANY);
 	sin.sin_port =htons(port);
 	sin.sin_family = AF_INET;
 
