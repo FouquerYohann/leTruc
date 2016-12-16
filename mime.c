@@ -35,7 +35,7 @@ int creerTab(mr_mime*** tab,int* taille){
   mr_mime** mr_mim_tab=(mr_mime**) malloc(1500*sizeof(mr_mime*));
 
   for(i=0;i<1500;i++)
-    mr_mim_tab[i]==NULL;
+    mr_mim_tab[i]=NULL;
 
   char * regexString ="(\\S+)\\s*(.+)*";
   regex_t regexCompiled;

@@ -133,7 +133,7 @@ char* parse_message(char* buffer, struct sockaddr_in csin){
 		strncpy(first,&buffer[start], size);
 		first[size]='\0';
 		char* size_fic = (char*)malloc (32*sizeof(char));
-		sprintf(size_fic,"%d octets",fic_stat.st_size);
+		sprintf(size_fic,"%zu octets",fic_stat.st_size);
 
 		logInfo* log=creer_log(clientIP,threadID,first,ret,size_fic);
 		write_log(log);

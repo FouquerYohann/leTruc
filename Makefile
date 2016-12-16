@@ -2,7 +2,8 @@
 GCC=gcc
 GPP=g++
 
-FLAGS=-Wall -g -fdiagnostics-color=auto -D DEBUG
+FLAGS=-Wall -g -D DEBUG
+#FLAGS=-Wall -g -fdiagnostics-color=auto -D DEBUG
 #FLAGS=-Wall -g -fdiagnostics-color=auto
 GCCFLAGS=  -g -pthread -lrt
 CPPFLAGS= 
