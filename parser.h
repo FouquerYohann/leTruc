@@ -28,7 +28,7 @@ extern int taille_mime_tab;
 char* parse_message(char* buffer,struct sockaddr_in csin);
 
 #ifndef STR_REGEX
-#define STR_REGEX "(GET (\\/[^\\.]+(\\.(.+))?)) HTTP\\/1\\.1\r\nHost: 127\\.0\\.0\\.1:.*"
+#define STR_REGEX "(GET \\/([^\\.]+(\\.(.+))?)? HTTP\\/1\\.1)\r\nHost: 127\\.0\\.0\\.1:.*"
 #endif
 /*STR_REGEX*/
 

@@ -1,5 +1,5 @@
 #ifndef SERVEUR_H
-#define SERVEUR_H
+#define SERVEUR_H truc
 #include <sys/mman.h>
 
 #include "thread.h"

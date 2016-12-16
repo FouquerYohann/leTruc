@@ -5,9 +5,9 @@ GPP=g++
 FLAGS=-Wall -g -D DEBUG
 #FLAGS=-Wall -g -fdiagnostics-color=auto -D DEBUG
 #FLAGS=-Wall -g -fdiagnostics-color=auto
-GCCFLAGS=  -g -pthread -lrt
+GCCFLAGS= -g  
 CPPFLAGS= 
-LIBS= -lm
+LIBS= -lm -lrt -pthread
 
 # User definitions must be here
 
@@ -35,7 +35,7 @@ OBJS = $(SOURCES:.c=.o)
 all: $(EXEC) 
 
 $(EXEC): $(INCS) $(OBJS) 
-	$(GCC) $(GCCFLAGS) $(OBJS) $(LIBS) -o $(EXEC) 
+	$(GCC) $(FLAGS) $(GCCFLAGS) $(OBJS) -o $(EXEC) $(LIBS)
 
 
 .SUFFIXES:
